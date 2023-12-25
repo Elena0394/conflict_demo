@@ -1,15 +1,13 @@
-<<<<<<< HEAD
-def hello_world(city, state):
-    print(f'Hello World {city}, {state}!')
-
+import sys
 
 def main():
-    hello_world('NYC', 'New York')
-=======
+    print("Hello World! From Python: " + str(sys.version_info))
+    if sys.version_info >= (3, 6) and sys.version_info < (3, 7):
+        # let's make this script fail for Python 3.6
+        raise Exception('Python version 3.6.x is unsupported!')
+
+if __name__ == "__main__":
+    main()
 
 
 
->>>>>>> 30423f651299be5e46a5ac4a45506c70675c3b28
-
-
-main()
